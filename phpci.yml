@@ -1,0 +1,36 @@
+build_settings:
+    ignore:
+        - "vendor"
+        - "tests"
+
+setup:
+    composer:
+        action: "install"
+    shell:
+        - "%BUILD_PATH%/app/console doctrine:schema:drop --force"
+        - "%BUILD_PATH%/app/console doctrine:schema:create"
+        - "%BUILD_PATH%/app/console doctrine:fixtures:load -n"
+
+
+
+test:
+    php_unit:
+        config: 
+           - "app/phpunit.xml.dist"
+    php_code_sniffer:
+        path: "src"
+        standard: "PSR1,PSR2"
+
+php_mess_detector:
+    rules: 
+        - "codesize"
+        - "unusedcode" 
+        - "naming"
+    allow_failures: true
+
+complete:
+   shell:
+        - "%BUILD_PATH%/app/console doctrine:schema:drop --force"
+        - "%BUILD_PATH%/app/console doctrine:schema:create"
+        - "%BUILD_PATH%/app/console doctrine:fixtures:load -n"
+
