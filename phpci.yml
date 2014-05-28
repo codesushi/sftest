@@ -20,6 +20,9 @@ test:
     php_code_sniffer:
         path: "src"
         standard: "PSR1,PSR2"
+        allowed_errors: 10
+        allow_warnings: 99999
+
 
 php_mess_detector:
     rules: 
