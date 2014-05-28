@@ -1,0 +1,4 @@
+coshi_sf_test:
+    resource: "@CoshiSfTestBundle/Resources/config/routing.yml"
+    prefix:   /
+

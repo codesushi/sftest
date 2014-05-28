@@ -1,0 +1,3 @@
+coshi_sf_test_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: CoshiSfTestBundle:Default:index }

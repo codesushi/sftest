@@ -1,0 +1,7 @@
+parameters:
+#    coshi_sf_test.example.class: Coshi\Bundle\SfTestBundle\Example
+
+services:
+#    coshi_sf_test.example:
+#        class: %coshi_sf_test.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
